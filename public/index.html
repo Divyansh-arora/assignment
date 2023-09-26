@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Registration and Listing</title>
+</head>
+<body>
+  <h1>User Registration and Listing</h1>
+  
+  <h2>User Registration</h2>
+  <form method="post" action="/register">
+    <label for="firstName">First Name:</label>
+    <input type="text" name="firstName" required pattern="^[A-Za-z]+$">
+    <br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="lastName" required pattern="^[A-Za-z]+$">
+    <br>
+
+    <label for="email">E-Mail:</label>
+    <input type="email" name="email" required>
+    <br>
+
+    <label for="country">Country:</label>
+    <select name="country" required>
+      <!-- Populate this dropdown dynamically from your MongoDB database -->
+      <option value="Country1">Country1</option>
+      <option value="Country2">Country2</option>
+      <!-- ... -->
+    </select>
+    <br>
+
+    <label for="state">State:</label>
+    <select name="state" required>
+      <!-- Populate this dropdown dynamically based on the selected country -->
+    </select>
+    <br>
+
+    <label for="city">City:</label>
+    <select name="city" required>
+      <!-- Populate this dropdown dynamically based on the selected state -->
+    </select>
+    <br>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female" required> Female
+    <input type="radio" name="gender" value="Other" required> Other
+    <br>
+
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="date" name="dateOfBirth" required>
+    <br>
+
+    <input type="submit" value="Register">
+  </form>
+
+  <h2>User Listing</h2>
+  <ul>
+    <!-- Display user information here -->
+  </ul>
+</body>
+</html>

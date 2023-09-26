@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User List</title>
+</head>
+<body>
+  <h1>User List</h1>
+  <ul>
+    {{#each users}}
+      <li>
+        <strong>{{this.firstName}} {{this.lastName}}</strong><br>
+        Email: {{this.email}}<br>
+        Country: {{this.country}}<br>
+        State: {{this.state}}<br>
+        City: {{this.city}}<br>
+        Gender: {{this.gender}}<br>
+        Date of Birth: {{this.dateOfBirth}}
+      </li>
+    {{/each}}
+  </ul>
+</body>
+</html>
